@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{ blog.blog_title }}{% endblock %}
+{% block body %}
+
+<h1><a href="{% url 'home' %}">我的博客</a></h1>
+<hr>
+<h1>{{ blog.blog_title }}</h1>
+<p><a href="{% url 'blog_type' blog.blog_type.id %}">{{ blog.blog_type }}</a></p>
+<p>author: {{ blog.blog_author }}</p>
+<hr>
+{{ blog.blog_content }}
+{% endblock %}
