@@ -1,0 +1,113 @@
+body {
+    padding-top: 50px;
+}
+
+.header-banner {
+    text-align: center;
+    min-height: 257px;
+    position: relative;
+    margin-top: -30px;
+    padding-top: 75px;
+    margin-bottom: 20px;
+    background-color: #4F5893;
+}
+
+.header-banner h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.header-banner p {
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 1.5em;
+    color: #B9BFE4;
+    margin: 20px auto;
+}
+
+.header-banner .total_num {
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 90%;
+    padding: 0.2em 0.3em 0.1em;
+    background-color: #fff;
+    color: #555;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+@media (min-width: 1200px) {
+    .header-banner {
+        min-height: 300px;
+        padding-top: 80px;
+    }
+}
+
+.tab-title {
+    font-size: x-large;
+    font-weight: inherit;
+    margin-top: 50px;
+}
+
+.title {
+    border-bottom: 1px #ccc solid;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+.list{
+    line-height: 2em;
+}
+.post-list li {
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    line-height: 1.5em;
+    font-size: 1.3em;
+}
+
+.member {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.member .introduction {
+    font-size: 0.5em;
+    initial-letter: normal;
+}
+
+.col-xs-4 {
+    margin-top: 25px;
+}
+
+.footer {
+    background-color: #282828;
+    margin-top: 35px;
+    padding: 10px 0px 0px 0px;
+}
+
+.footer .title {
+    text-align: left;
+    font-family: "Microsoft YaHei UI Light";
+    font-weight: normal;
+    color: white;
+}
+
+.footer li {
+    color: #ababab;
+    line-height: 2em;
+}
+
+.footer .container-fluid {
+    padding: 0 0 0 0;
+    color: cyan;
+}
+.footer .copyright p {
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+}
