@@ -1,38 +1,64 @@
 {% extends 'base.html' %}
-{% block title %}首页{% endblock %}
-<hr>
+{% load static %}
+{% block title %}博客列表{% endblock %}
+
+{% block title-banner %}博客{% endblock %}
+
 {% block body %}
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                ut
-                fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {#TODO 分类#}
+                    </div>
+                </div>
+                {% for blog in blogs %}
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p class="post-title">
+                                <a href="{% url 'blog_detail' blog.pk %}">{{ blog.blog_title }}</a>
+                            </p>
+                            <p class="post-border">
+                                {{ blog.blog_content|truncatechars_html:120 }}
+                            </p>
+                            <div class="post-tags">
+                                <span class="glyphicon glyphicon-time"></span>
+                                <span>{{ blog.blog_create_time|date:"Y-m-d" }}</span>
+                                <span class="glyphicon glyphicon-tag"></span>
+                                <span>
+                                    <a href="{% url 'blog_type' blog.blog_type.pk %}"> {{ blog.blog_type }}</a>
+                                </span>
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span> {{ blog.blog_author }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">微信公众号</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="{% static 'img/weixin.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">随机推荐</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list">
+                            {#TODO 随即推荐#}
+                            <li><a href="">asd</a></li>
+                            <li><a href="">asd</a></li>
+                            <li><a href="">asd</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    {% for blog in blogs %}
-
-        <h3><a href="{% url 'blog_detail' blog.id %}">{{ blog.blog_title }}</a></h3>
-        <p><a href="{% url 'blog_type' blog.blog_type.id %}">{{ blog.blog_type }}</a></p>
-        <p>{{ blog.blog_content|truncatechars:30 }}</p>
-    {% endfor %}
 {% endblock %}

@@ -5,7 +5,7 @@ from blog.models import Blog, BlogType
 # 首页
 def blog(request):
     context = {}
-    context['blogs'] = Blog.objects.all();
+    context['blogs'] = Blog.objects.all()
     return render_to_response('blog_home.html', context=context)
 
 

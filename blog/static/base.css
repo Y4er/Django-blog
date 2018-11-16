@@ -1,5 +1,7 @@
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: lightgoldenrodyellow;
+.post-title {
+    font-size: 13pt;
+    font-weight: bold;
+}
+.post-tags {
+    padding-top: 5px;
 }
