@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}博客列表{% endblock %}
+
+{% block title-banner %}博客{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+
+                {#文章列表#}
+                {% for blog in blogs %}
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p class="post-title">
+                                <a href="{% url 'blog_detail' blog.pk %}">{{ blog.blog_title }}</a>
+                            </p>
+                            <p class="post-border">
+                                {{ blog.blog_content|truncatechars_html:120 }}
+                            </p>
+                            <div class="post-tags">
+                                <span class="glyphicon glyphicon-time"></span>
+                                <span>{{ blog.blog_create_time|date:"Y-m-d" }}</span>
+                                <span class="glyphicon glyphicon-tag"></span>
+                                <span>
+                                    <a href="{% url 'blog_type' blog.blog_type.pk %}"> {{ blog.blog_type }}</a>
+                                </span>
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span> {{ blog.blog_author }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {#分页#}
+                <div class="page">
+                    <ul class="pager">
+                        {# 上一页 #}
+                        {% if page.has_previous %}
+                            <li class="previous">
+                                <a href="?page={{ page.previous_page_number }}">上一页还有哦！</a>
+                            </li>
+                        {% else %}
+                            <li class="previous disabled">
+                                <a href="#">没有了</a>
+                            </li>
+                        {% endif %}
+
+                        {# 全部页码 #}
+                        {% for pagenum in page_range %}
+                            {% if pagenum == page.number %}
+                                <li class="active">
+                                    <a href="?page={{ pagenum }}">{{ pagenum }}</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="?page={{ pagenum }}">{{ pagenum }}</a>
+                                </li>
+                            {% endif %}
+
+                        {% endfor %}
+
+                        {# 下一页 #}
+                        {% if page.has_next %}
+                            <li class="next">
+                                <a href="?page={{ page.next_page_number }}">下一页还有哦！</a>
+                            </li>
+                        {% else %}
+                            <li class="next disabled">
+                                <a href="#">没有了</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            {# 侧边栏 #}
+            {% include 'siderbar.html' %}
+        </div>
+    </div>
+{% endblock %}

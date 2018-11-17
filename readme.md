@@ -1,5 +1,5 @@
 # Django-blog
-我的第二个使用django写的blog程序。
+我的第二个使用django写的blog程序。**填坑中**
 
 ## 环境
 python3.6+Django2
@@ -14,7 +14,7 @@ python3.6+Django2
 自行配置各个模块的`urls.py`以及项目中`urls.py`
 
 ## TODO
-- [ ] 分类
+- [x] 分类
 - [ ] 随机推荐
 - [ ] 公告完善
 - [ ] 阅读趋势及阅读量

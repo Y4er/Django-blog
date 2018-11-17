@@ -1,0 +1,40 @@
+{% load static %}
+<div class="col-md-4 col-xs-12">
+    {# 分类列表 #}
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">文章分类</h3>
+        </div>
+        <div class="list-group">
+            {% for type in types %}
+                <a href="{% url 'blog_type' type.pk %}" class="list-group-item">
+                    {{ type }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# 微信公众号 #}
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">微信公众号</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{% static 'img/weixin.jpg' %}" alt="">
+        </div>
+    </div>
+
+    {# TODO 随机推荐 #}
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">随机推荐</h3>
+        </div>
+        <div class="panel-body">
+            <ul class="list">
+                <li><a href="">asd</a></li>
+                <li><a href="">asd</a></li>
+                <li><a href="">asd</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

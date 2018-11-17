@@ -1,5 +1,12 @@
 body {
     padding-top: 50px;
+    font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+p {
+    color: #3d464d;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .header-banner {
@@ -62,9 +69,11 @@ ul {
 li {
     list-style: none;
 }
-.list{
+
+.list {
     line-height: 2em;
 }
+
 .post-list li {
     font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
     line-height: 1.5em;
@@ -105,9 +114,10 @@ li {
 
 .footer .container-fluid {
     padding: 0 0 0 0;
-    color: cyan;
 }
+
 .footer .copyright p {
+    color: cyan;
     margin: 5px 0px 5px 0px;
     text-align: center;
 }
