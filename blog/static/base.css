@@ -3,14 +3,17 @@ p {
     font-size: 14px;
     line-height: 1.6;
 }
+
 .post-title {
     font-size: 13pt;
     font-weight: bold;
 }
+
 .post-tags {
     padding-top: 5px;
 }
-li.active a{
+
+li.active a {
     color: #000;
     text-decoration: none;
 }

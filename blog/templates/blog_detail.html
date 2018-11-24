@@ -1,5 +1,50 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    {#  editormd  #}
+    <link rel="stylesheet" href="{% static 'editormd/editormd.min.css' %}">
+    <link rel="stylesheet" href="{% static 'editormd/editormd.preview.min.css' %}">
+    {# 灯箱 #}
+    <link rel="stylesheet" href="{% static 'fancybox/jquery.fancybox-buttons.css' %}?v=1.0.5">
+    <link rel="stylesheet" href="{% static 'fancybox/jquery.fancybox-thumbs.css' %}?v=1.0.7">
+    <link rel="stylesheet" href="{% static 'fancybox/jquery.fancybox.css' %}?v=2.1.7">
+{% endblock %}
 {% block title %}{{ blog.blog_title }}{% endblock %}
+{% block title-banner %}{{ blog.blog_title }}{% endblock %}
+{% block desc %}Type:<a href="{% url 'blog_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a> Author:{{ blog.blog_author }}{% endblock %}
 {% block body %}
-{{ blog.blog_content }}
+
+    <div class="container">
+        <div class="row">
+            {# 文章内容 #}
+            <div class="col-md-8 col-xs-12">
+                <div class="page-content">
+                    <div id="post-content">
+                        <textarea style="display:none;">{{ blog.blog_content }}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            {# 侧边栏 #}
+            {% include 'siderbar.html' %}
+
+        </div>
+    </div>
+
+    {# 利用editormd解析markdown文档 #}
+    <script src="{% static 'editormd/editormd.min.js' %}"></script>
+    <script src="{% static 'editormd/marked.min.js' %}"></script>
+    <script src="{% static 'editormd/prettify.min.js' %}"></script>
+    <script src="{% static 'editormd/raphael.min.js' %}"></script>
+    <script src="{% static 'editormd/underscore.min.js' %}"></script>
+    <script src="{% static 'editormd/sequence-diagram.min.js' %}"></script>
+    <script src="{% static 'editormd/flowchart.min.js' %}"></script>
+    <script src="{% static 'editormd/jquery.flowchart.min.js' %}"></script>
+    {# 图片灯箱 #}
+    <script src="{% static 'fancybox/myjs.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fancybox/jquery.mousewheel.pack.js' %}"></script>
+    <script src="{% static 'fancybox/jquery.fancybox.js' %}?v=2.1.7"></script>
+    <script src="{% static 'fancybox/jquery.fancybox-buttons.js' %}?v=1.0.5"></script>
+    <script src="{% static 'fancybox/jquery.fancybox-media.js' %}?v=1.0.6"></script>
+    <script src="{% static 'fancybox/jquery.fancybox-thumbs.js' %}?v=1.0.7"></script>
 {% endblock %}

@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}博客列表{% endblock %}
-
 {% block title-banner %}博客{% endblock %}
-
+{% block desc %}原创文章为了质量更新较慢，见谅。{% endblock %}
 {% block body %}
     <div class="container">
         <div class="row">
@@ -17,7 +16,7 @@
                                 <a href="{% url 'blog_detail' blog.pk %}">{{ blog.blog_title }}</a>
                             </p>
                             <p class="post-border">
-                                {{ blog.blog_content|truncatechars_html:120 }}
+                                {{ blog.blog_content|truncatewords_html:80 }}
                             </p>
                             <div class="post-tags">
                                 <span class="glyphicon glyphicon-time"></span>

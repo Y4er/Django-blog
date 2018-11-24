@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} - 一个分享知识、结识伙伴、资源共享的博客。</title>
@@ -45,7 +45,7 @@
 <div class="header-banner">
     <div class="container">
         <h1>{% block title-banner %}博客{% endblock %}</h1>
-        <p>这里是我们的博客内容，更新稍慢，见谅。</p>
+        <p>{% block desc %}这里是我们的博客内容，更新稍慢，见谅。{% endblock %}</p>
     </div>
 </div>
 

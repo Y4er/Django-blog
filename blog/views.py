@@ -28,6 +28,9 @@ def blog_list(request):
 # 具体的某篇文章
 def blog_detail(request, id):
     context = {}
+
+    types = BlogType.objects.all()
+    context['types'] = types
     context['blog'] = get_object_or_404(Blog, id=id)
     return render_to_response('blog_detail.html', context)
 
@@ -55,3 +58,5 @@ def blog_type(request, id):
     context['types'] = types
 
     return render_to_response('blog_list.html', context)
+
+# TODO 按作者分类
