@@ -38,7 +38,5 @@ python3.6+Django2
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxjhmbkfr5j315w21b45f.jpg)
 文章列表
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxjhn9x9dkj31hc1x17d5.jpg)
-文章页
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhoixnpaj312k9bpb2d.jpg)
 后台编辑器
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxjhgvitkwj31f90oqtj4.jpg)
