@@ -1,12 +1,15 @@
 from django.shortcuts import get_object_or_404, render_to_response
 from blog.models import Blog, BlogType
+from django.db.models import Q      # ~Q filter取反
 from django.core.paginator import Paginator as pagetool
 
 
 # 博客文章列表
 def blog_list(request):
+    # 获取不显示的文章分类
+    type_notice = get_object_or_404(BlogType, hide=True)
     # 分页
-    allBlogList = Blog.objects.all()  # 获取所有文章
+    allBlogList = Blog.objects.all().filter(~Q(blog_type=type_notice))  # 获取所有文章
     paginator = pagetool(allBlogList, 8)  # 每8篇文章分页
     pagenum = request.GET.get('page', 1)  # 当前get请求的page
     page = paginator.get_page(pagenum)  # 获取分页的8篇文章

@@ -9,17 +9,6 @@ python3.6+Django2
 - 前端采用editor.md解析markdown文档
 - 添加图片灯箱
 
-## 样式
-首页
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhmbkfr5j315w21b45f.jpg)
-文章列表
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhn9x9dkj31hc1x17d5.jpg)
-文章页
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhoixnpaj312k9bpb2d.jpg)
-后台编辑器
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhgvitkwj31f90oqtj4.jpg)
-
-
 ## APP
 |APP名|APP用途|URL地址|
 |:---:|:----:|:---:|
@@ -43,3 +32,11 @@ python3.6+Django2
 - [ ] 点赞
 - [ ] 登录注册
 - [ ] 作者文章
+
+## 样式
+首页
+![](https://ws1.sinaimg.cn/large/006xriynly1fxjhmbkfr5j315w21b45f.jpg)
+文章列表
+![](https://ws1.sinaimg.cn/large/006xriynly1fxjhn9x9dkj31hc1x17d5.jpg)
+后台编辑器
+![](https://ws1.sinaimg.cn/large/006xriynly1fxjhgvitkwj31f90oqtj4.jpg)

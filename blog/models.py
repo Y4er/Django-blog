@@ -5,6 +5,7 @@ from mdeditor.fields import MDTextField
 
 class BlogType(models.Model):
     type_name = models.CharField(verbose_name="文章分类", max_length=10)
+    hide = models.BooleanField(verbose_name="隐藏", default=False)
 
     class Meta:
         verbose_name = "分类"
@@ -22,6 +23,7 @@ class Blog(models.Model):
     blog_author = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="文章作者")
     blog_create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     blog_update_time = models.DateTimeField(auto_now=True, verbose_name="更新时间")
+    ishide = models.ForeignKey(BlogType, related_name="ishide", on_delete=models.DO_NOTHING, verbose_name="隐藏吗？")
 
     # 后台显示缩略名 并倒序
     class Meta:

@@ -49,12 +49,14 @@
 
 <div class="container">
     <div class="row">
-        {#公告 TODO 公告细节完善#}
         <div class="col-sm-4">
             <h3 class="title">公告</h3>
             <ul class="list">
-                <li>ChaBug官网改版</li>
-                <li>ChaBug官网改版</li>
+                {% for post in notice %}
+                <li>
+                    <a href="{% url 'blog_detail' post.pk %}">{{ post }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </div>
 
