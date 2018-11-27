@@ -41,5 +41,7 @@ python3.6+Django2
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxmzgeadytj31hc1x1thn.jpg)
 后台编辑器
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxmzjieiy3j31hc121q7w.jpg)
+灯箱效果
+![](https://ws1.sinaimg.cn/large/006xriynly1fxmzpgdafyj31hc0p41kx.jpg)
 文章页
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxmzmlidygj31638jjhdu.jpg)
