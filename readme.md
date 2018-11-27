@@ -24,19 +24,22 @@ python3.6+Django2
 - [x] 文章页
 - [x] 公告完善
 - [ ] 随机推荐
-- [ ] 阅读趋势及阅读量
+- [ ] 作者文章
+- [ ] 阅读计数
+- [ ] 阅读趋势
 - [ ] 热门文章
 - [ ] 成员展示
 - [ ] 友情链接
 - [ ] 评论
 - [ ] 点赞
 - [ ] 登录注册
-- [ ] 作者文章
 
 ## 样式
 首页
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhmbkfr5j315w21b45f.jpg)
+![](https://ws1.sinaimg.cn/large/006xriynly1fxmzfmch6wj31hc1n60zm.jpg)
 文章列表
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhn9x9dkj31hc1x17d5.jpg)
+![](https://ws1.sinaimg.cn/large/006xriynly1fxmzgeadytj31hc1x1thn.jpg)
 后台编辑器
-![](https://ws1.sinaimg.cn/large/006xriynly1fxjhgvitkwj31f90oqtj4.jpg)
+![](https://ws1.sinaimg.cn/large/006xriynly1fxmzjieiy3j31hc121q7w.jpg)
+文章页
+![](https://ws1.sinaimg.cn/large/006xriynly1fxmzmlidygj31638jjhdu.jpg)

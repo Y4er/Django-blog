@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render_to_response
 from blog.models import Blog, BlogType
-from django.db.models import Q      # ~Q filter取反
+from django.db.models import Q  # ~Q filter取反
 from django.core.paginator import Paginator as pagetool
 
 

@@ -11,7 +11,8 @@
 {% endblock %}
 {% block title %}{{ blog.blog_title }}{% endblock %}
 {% block title-banner %}{{ blog.blog_title }}{% endblock %}
-{% block desc %}Type:<a href="{% url 'blog_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a> Author:{{ blog.blog_author }}{% endblock %}
+{% block desc %}Type:<a href="{% url 'blog_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a> Author:
+    {{ blog.blog_author }}{% endblock %}
 {% block body %}
 
     <div class="container">

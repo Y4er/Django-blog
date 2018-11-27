@@ -13,7 +13,7 @@ $(function () {
         console.log(obj);
     })
 });
-// todo 解决Cannot read property 'getAttribute' of undefined
+// 未解决Cannot read property 'getAttribute' of undefined
 window.onload = function () {
     var postContent = document.getElementById("post-content");
     var imgs = postContent.getElementsByTagName("img");

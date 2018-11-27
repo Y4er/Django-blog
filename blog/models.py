@@ -33,3 +33,5 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.blog_title
+
+# TODO 阅读计数

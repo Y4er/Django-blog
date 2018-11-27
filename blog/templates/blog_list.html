@@ -16,7 +16,7 @@
                                 <a href="{% url 'blog_detail' blog.pk %}">{{ blog.blog_title }}</a>
                             </p>
                             <p class="post-border">
-                                {{ blog.blog_content|truncatewords_html:80 }}
+                                {{ blog.blog_content|truncatewords_html:30 }}
                             </p>
                             <div class="post-tags">
                                 <span class="glyphicon glyphicon-time"></span>
