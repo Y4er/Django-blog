@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import exceptions
 from django.contrib.auth.models import User
 from mdeditor.fields import MDTextField
 
@@ -23,7 +24,6 @@ class Blog(models.Model):
     blog_author = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="文章作者")
     blog_create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     blog_update_time = models.DateTimeField(auto_now=True, verbose_name="更新时间")
-    ishide = models.ForeignKey(BlogType, related_name="ishide", on_delete=models.DO_NOTHING, verbose_name="隐藏吗？")
 
     # 后台显示缩略名 并倒序
     class Meta:
@@ -34,4 +34,18 @@ class Blog(models.Model):
     def __str__(self):
         return self.blog_title
 
-# TODO 阅读计数
+    def get_read_num(self):
+        try:
+            return self.readnum.read_num
+        except exceptions.ObjectDoesNotExist:
+            return 0
+
+
+# 阅读计数
+class ReadNum(models.Model):
+    read_num = models.IntegerField(default=0, verbose_name="阅读量")
+    blog = models.OneToOneField(Blog, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        verbose_name = "阅读量"
+        verbose_name_plural = verbose_name

@@ -12,17 +12,20 @@
 {% block title %}{{ blog.blog_title }}{% endblock %}
 {% block title-banner %}{{ blog.blog_title }}{% endblock %}
 {% block desc %}Type:<a href="{% url 'blog_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a> Author:
-    {{ blog.blog_author }}{% endblock %}
+    {{ blog.blog_author }} ReadNum:{{ blog.get_read_num }}{% endblock %}
 {% block body %}
 
     <div class="container">
         <div class="row">
             {# 文章内容 #}
+            {# TODO 目录位置调整到sidebar #}
             <div class="col-md-8 col-xs-12">
                 <div class="page-content">
                     <div id="post-content">
                         <textarea style="display:none;">{{ blog.blog_content }}</textarea>
                     </div>
+                    {# TODO 评论框 #}
+                    <div class="comment"></div>
                 </div>
             </div>
 

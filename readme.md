@@ -23,20 +23,20 @@ python3.6+Django2
 - [x] 分类
 - [x] 文章页
 - [x] 公告完善
-- [ ] 随机推荐
-- [ ] 作者文章
-- [ ] 阅读计数
-- [ ] 阅读趋势
+- [x] 随机推荐
+- [x] 阅读计数
+- [x] 最近更新
 - [ ] 热门文章
+- [ ] 阅读趋势
 - [ ] 成员展示
 - [ ] 友情链接
+- [ ] 登录注册
 - [ ] 评论
 - [ ] 点赞
-- [ ] 登录注册
 
 ## 样式
 首页
-![](https://ws1.sinaimg.cn/large/006xriynly1fxmzfmch6wj31hc1n60zm.jpg)
+![](https://ws1.sinaimg.cn/large/006xriynly1fxo5frb1w7j31hc1swgtb.jpg)
 文章列表
 ![](https://ws1.sinaimg.cn/large/006xriynly1fxmzgeadytj31hc1x1thn.jpg)
 后台编辑器

@@ -61,7 +61,6 @@
         </div>
 
         {#tab页#}
-        {# TODO 趋势及阅读量 #}
         <div class="col-sm-8">
             <h4>
                 <ul class="nav nav-tabs">
@@ -73,6 +72,7 @@
                 <div class="tab-pane active " id="weixin">
                         <p><img src="{% static 'img/weixin.jpg' %}" alt="微信公众号"></p>
                 </div>
+                {# TODO 阅读趋势曲线 #}
                 <div class="tab-pane" id="other">
                         <p>其他</p>
                 </div>
@@ -89,16 +89,15 @@
     </h4>
 </div>
 
-{#文章列表 TODO 更新、热门完善#}
+{# TODO 热门文章#}
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
             <h3 class="title">最近更新</h3>
             <ul class="post-list">
-                <li>ChaBug第一篇文章</li>
-                <li>ChaBug第一篇文章</li>
-                <li>ChaBug第一篇文章</li>
-                <li>ChaBug第一篇文章</li>
+                {% for last_blog in last_blogs %}
+                    <li><a href="{% url 'blog_detail' last_blog.pk %}">{{ last_blog.blog_title }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="col-sm-4">
@@ -122,7 +121,7 @@
     </div>
 </div>
 
-{#团队成员 TODO 代码实现 #}
+{# TODO 成员展示 #}
 <div class="container">
     <h4 class="tab-title">
         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>

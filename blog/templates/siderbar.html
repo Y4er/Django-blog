@@ -23,17 +23,16 @@
             <img src="{% static 'img/weixin.jpg' %}" alt="">
         </div>
     </div>
-
-    {# TODO 随机推荐 #}
+    {#随机推荐#}
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">随机推荐</h3>
         </div>
         <div class="panel-body">
             <ul class="list">
-                <li><a href="">asd</a></li>
-                <li><a href="">asd</a></li>
-                <li><a href="">asd</a></li>
+                {% for random_blog in random_blogs %}
+                    <li><a href="{% url 'blog_detail' random_blog.pk %}">{{ random_blog.blog_title }}</a></li>
+                {% endfor %}
             </ul>
         </div>
     </div>
