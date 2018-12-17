@@ -1,5 +1,5 @@
 # Django-blog
-我的第二个使用django写的blog程序。**填坑中**
+我的第二个使用django写的blog程序。~~填坑~~ **弃坑**
 
 ## 环境
 python3.6+Django2
